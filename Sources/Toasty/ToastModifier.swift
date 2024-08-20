@@ -31,4 +31,3 @@ extension View {
         self.modifier(ToastModifier.init(toastView: toastView))
     }
 }
-

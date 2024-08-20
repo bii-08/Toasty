@@ -42,7 +42,7 @@ enum ToastType {
             return Color.green
         case .info: 
             return Color.blue
-        case .custom (let color, _):
+        case .custom(let color, _):
             return color
         }
     }

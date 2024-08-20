@@ -22,7 +22,7 @@ struct SwiftUIView: View {
             .ignoresSafeArea()
             .navigationTitle("Testing")
         }
-        .toast(toastView: Toasty(toast: Toast(title: "Warning", message: "This is the message for this error. This is the message for this error.",duration: 1, position: .top, type: .warning), showToast: $showingToast))
+        .toast(toastView: Toasty(toast: Toast(title: "Warning", message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", duration: 1, position: .top, type: .warning), showToast: $showingToast))
     }
 }
 
