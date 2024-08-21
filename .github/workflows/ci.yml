@@ -39,8 +39,11 @@ jobs:
       with:
         xcode-version: latest
 
-    - name: Build the package
-      run: swift build -v
+    - name: Build the package on iOS simulator
+      run: |
+        xcodebuild clean build \
+          -scheme Toasty \
+          -destination 'platform=iOS Simulator,name=iPhone 14 Pro,OS=latest'
 
     # steps:
     # - uses: actions/checkout@v4
