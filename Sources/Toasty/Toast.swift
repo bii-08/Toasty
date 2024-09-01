@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct Toast: Equatable {
-    static func == (lhs: Toast, rhs: Toast) -> Bool {
+public struct Toast: Equatable {
+    public static func == (lhs: Toast, rhs: Toast) -> Bool {
         lhs.title == rhs.title
     }
     
@@ -17,15 +17,23 @@ struct Toast: Equatable {
     var duration: Double?
     var position: Position
     var type: ToastType
+    
+    public init(title: String, message: String, duration: Double? = nil, position: Position, type: ToastType) {
+        self.title = title
+        self.message = message
+        self.duration = duration
+        self.position = position
+        self.type = type
+    }
 }
 
-enum Position {
+public enum Position {
     case bottom
     case top
     case center
 }
 
-enum ToastType {
+public enum ToastType {
     case error
     case warning
     case success

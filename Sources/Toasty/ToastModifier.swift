@@ -7,11 +7,15 @@
 
 import SwiftUI
 
-struct ToastModifier: ViewModifier {
+public struct ToastModifier: ViewModifier {
     
     var toastView: Toasty
     
-    func body(content: Content) -> some View {
+    public init(toastView: Toasty) {
+        self.toastView = toastView
+    }
+    
+    public func body(content: Content) -> some View {
         
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -27,7 +31,7 @@ struct ToastModifier: ViewModifier {
 }
 
 extension View {
-    func toast(toastView: Toasty) -> some View {
+    public func toast(toastView: Toasty) -> some View {
         self.modifier(ToastModifier.init(toastView: toastView))
     }
 }
