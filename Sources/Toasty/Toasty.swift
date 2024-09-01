@@ -3,12 +3,17 @@
 
 import SwiftUI
 
-struct Toasty: View {
+public struct Toasty: View {
     @Environment(\.colorScheme) private var colorScheme
     var toast: Toast
-    @Binding var showToast: Bool
+    @Binding public var showToast: Bool
+    
+    public init(toast: Toast, showToast: Binding<Bool>) {
+        self.toast = toast
+        self._showToast = showToast
+    }
    
-    var body: some View {
+    public var body: some View {
         
         HStack(alignment: .center, spacing: 12) {
             Image(systemName: toast.type.icon)
