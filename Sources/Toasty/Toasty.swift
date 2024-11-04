@@ -68,7 +68,7 @@ public struct Toasty: View {
                     )
                 
                 Text("")
-                    .padding(.horizontal, 172)
+                    .padding(.horizontal, 180)
             }
         }
         .onAppear {
